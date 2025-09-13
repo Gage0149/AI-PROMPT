@@ -3,32 +3,32 @@
         {
             "name": { "cn": "男人", "en": "Man" },
             "category": "人物",
-            "image": "https://vip.123pan.cn/1841959936/yk6baz03t0n000d7w33h2lo2lmykb2o3DIYxDIryBIrwApxvDdQOAY==.png"
+            "image": "https://your-image-host.com/man.png"
         },
         {
             "name": { "cn": "女人", "en": "Woman" },
             "category": "人物",
-            "image": "https://vip.123pan.cn/1841959936/yk6baz03t0n000d7w33h2lo2lmykb2o3DIYxDIryBIrwApxvDdQOAY==.png"
+            "image": "https://your-image-host.com/woman.png"
         },
         {
             "name": { "cn": "美女", "en": "Beautiful Woman" },
             "category": "人物",
-            "image": "https://vip.123pan.cn/1841959936/yk6baz03t0n000d7w33h2lo2lmykb2o3DIYxDIryBIrwApxvDdQOAY==.png"
+            "image": "https://your-image-host.com/beauty.png"
         },
         {
             "name": { "cn": "儿童", "en": "Child" },
             "category": "人物",
-            "image": "https://vip.123pan.cn/1841959936/yk6baz03t0n000d7w33h2lo2lmykb2o3DIYxDIryBIrwApxvDdQOAY==.png"
+            "image": "https://your-image-host.com/child.png"
         },
         {
             "name": { "cn": "战士", "en": "Warrior" },
             "category": "人物",
-            "image": "https://vip.123pan.cn/1841959936/yk6baz03t0n000d7w33h2lo2lmykb2o3DIYxDIryBIrwApxvDdQOAY==.png"
+            "image": "https://your-image-host.com/warrior.png"
         },
         {
             "name": { "cn": "森林", "en": "Forest" },
             "category": "环境",
-            "image": "https://vip.123pan.cn/1841959936/yk6baz03t0n000d7w33h2lo2lmykb2o3DIYxDIryBIrwApxvDdQOAY==.png"
+            "image": "https://your-image-host.com/forest.png"
         },
         {
             "name": { "cn": "公园", "en": "Park" },
@@ -63,27 +63,22 @@
         {
             "name": { "cn": "裤子", "en": "Pants" },
             "category": "服饰",
-            "image": "https://vip.123pan.cn/1841959936/yk6baz03t0n000d7w33h2lo2lmykb2o3DIYxDIryBIrwApxvDdQOAY==.png"
+            "image": "https://your-image-host.com/pants.png"
         },
         {
             "name": { "cn": "衬衫", "en": "Shirt" },
             "category": "服饰",
-            "image": "https://vip.123pan.cn/1841959936/yk6baz03t0n000d7w33h2lo2lmykb2o3DIYxDIryBIrwApxvDdQOAY==.png"
+            "image": "https://your-image-host.com/shirt.png"
         },
         {
             "name": { "cn": "背心", "en": "Vest" },
             "category": "服饰",
-            "image": "https://vip.123pan.cn/1841959936/yk6baz03t0n000d7w33h2lo2lmykb2o3DIYxDIryBIrwApxvDdQOAY==.png"
+            "image": "https://your-image-host.com/vest.png"
         },
         {
             "name": { "cn": "连衣裙", "en": "Dress" },
             "category": "服饰",
-            "image": "https://vip.123pan.cn/1841959936/yk6baz03t0n000d7w33h2lo2lmykb2o3DIYxDIryBIrwApxvDdQOAY==.png"
+            "image": "https://your-image-host.com/dress.png"
         }
-
     ]
-
 }
-
-
-
