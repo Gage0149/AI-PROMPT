@@ -77,12 +77,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             tagName.appendChild(nameCn);
             tagName.appendChild(nameEn);
+
             tagCard.appendChild(img);
             tagCard.appendChild(tagName);
 
             tagCard.addEventListener('click', () => {
                 tagCard.classList.toggle('selected');
                 const enName = tag.name.en;
+
                 if (selectedTags.has(enName)) {
                     selectedTags.delete(enName);
                 } else {
@@ -106,45 +108,42 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // === MODIFIED SECTION START: Robust Copy Function ===
+    // === MODIFIED SECTION START ===
+    // *** 移除了 alert 弹窗，并替换为更友好的按钮状态反馈 ***
     copyButton.addEventListener('click', () => {
         const textToCopy = selectionBox.value;
         if (!textToCopy) {
-            alert('没有内容可以复制。');
+            // 如果没有内容，则不执行任何操作
             return;
         }
 
-        // 优先使用现代、安全的 Clipboard API
-        if (navigator.clipboard && window.isSecureContext) {
-            navigator.clipboard.writeText(textToCopy).then(() => {
-                alert('已成功复制到剪贴板！');
-            }).catch(err => {
-                alert('复制失败，请检查浏览器权限。');
-            });
-        } else {
-            // 备用方案：使用传统的 document.execCommand
-            const textArea = document.createElement('textarea');
-            textArea.value = textToCopy;
-            // 样式使其在屏幕外，不可见
-            textArea.style.position = 'fixed';
-            textArea.style.top = '-9999px';
-            textArea.style.left = '-9999px';
-            
-            document.body.appendChild(textArea);
-            textArea.select();
-            
-            try {
-                const successful = document.execCommand('copy');
-                if (successful) {
-                    alert('已成功复制到剪贴板！');
-                } else {
-                    alert('复制失败！');
-                }
-            } catch (err) {
-                alert('复制失败，浏览器不支持此操作。');
-            } finally {
-                document.body.removeChild(textArea);
+        const originalText = copyButton.textContent;
+        copyButton.disabled = true; // 临时禁用按钮防止重复点击
+
+        try {
+            selectionBox.readOnly = false;
+            selectionBox.select();
+            const successful = document.execCommand('copy');
+            selectionBox.readOnly = true;
+            window.getSelection().removeAllRanges();
+
+            if (successful) {
+                copyButton.textContent = '已复制!';
+                copyButton.style.backgroundColor = '#218838'; // 成功状态的深绿色
+            } else {
+                copyButton.textContent = '复制失败';
+                copyButton.style.backgroundColor = '#c82333'; // 失败状态的红色
             }
+        } catch (err) {
+            copyButton.textContent = '复制失败';
+            copyButton.style.backgroundColor = '#c82333';
+        } finally {
+            // 无论成功或失败，在1.5秒后都恢复按钮的原始状态
+            setTimeout(() => {
+                copyButton.textContent = originalText;
+                copyButton.style.backgroundColor = ''; // 恢复 CSS 文件中定义的原始颜色
+                copyButton.disabled = false; // 重新启用按钮
+            }, 1500);
         }
     });
     // === MODIFIED SECTION END ===
