@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "ai-prompt-gallery",
+  "name": "ai-prompt",
   "main": "worker/index.js",
   "compatibility_date": "2026-07-01",
   "assets": { "directory": "./public", "binding": "ASSETS" }
