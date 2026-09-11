@@ -1,5 +1,38 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PromptDock · AI 会话提示词</title><link rel="stylesheet" href="/styles.css"></head><body>
-<div class="shell"><aside><div class="brand"><span>✦</span><b>PromptDock</b></div><button id="newBtn" class="primary">＋ 新建提示词</button><nav><button class="nav active" data-cat="全部">⌂ 全部提示词</button><div class="caption">分类</div><div id="cats"></div></nav><div class="syncbox"><div><span id="dot" class="dot"></span><b id="syncText">等待同步</b></div><small id="syncDetail">Cloudflare ↔ 飞书</small><button id="syncBtn">立即同步</button></div></aside>
-<main><header><div><h1>AI 会话提示词库</h1><p>网页与飞书文档双向同步</p></div><div class="actions"><input id="search" placeholder="搜索标题、标签或内容…"><button id="pullBtn">从飞书刷新</button></div></header><div class="toolbar"><span id="count"></span><select id="categoryFilter"><option>全部分类</option></select></div><section id="grid" class="grid"></section></main></div>
-<dialog id="editor"><form method="dialog"><div class="modal-head"><h2 id="modalTitle">编辑提示词</h2><button value="cancel">×</button></div><input id="pid" type="hidden"><label>标题<input id="title"></label><div class="row"><label>分类<input id="category"></label><label>标签<input id="tags" placeholder="逗号分隔"></label></div><label>提示词内容<textarea id="content" rows="14"></textarea></label><div class="modal-actions"><button value="cancel">取消</button><button id="saveBtn" type="button" class="primary">保存并同步飞书</button></div></form></dialog>
-<script src="/app.js"></script></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>AI 绘画提示词库</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side">
+    <a class="brand" href="#" data-nav="library">
+      <span class="logo">AI</span>
+      <span><b>绘画提示词库</b><small>PROMPT GALLERY</small></span>
+    </a>
+    <nav id="nav">
+      <span class="nav-label">提示词</span>
+      <button class="active" data-page="library"><span class="ico">▦</span><span>提示词库</span></button>
+      <button data-page="favorites"><span class="ico">★</span><span>我的收藏</span><b class="nav-count" id="favCount"></b></button>
+      <span class="nav-label">系统</span>
+      <button data-page="connect"><span class="ico">⚙</span><span>飞书连接</span></button>
+    </nav>
+    <div class="side-foot"><span class="dot"></span><span id="sideStatus">尚未连接</span></div>
+  </aside>
+  <main>
+    <header>
+      <div class="top-title" id="topTitle"><span>PROMPT GALLERY</span><strong>AI 绘画提示词库</strong></div>
+      <div class="header-actions"><span id="syncStatus"></span><button class="btn" id="refresh">↻ 同步</button><button class="btn primary" data-action="new">＋ 新增提示词</button></div>
+    </header>
+    <div id="notice" class="notice hidden"></div>
+    <section id="view"></section>
+    <footer>AI Prompt Gallery · 数据由飞书多维表格驱动</footer>
+  </main>
+</div>
+<div id="overlay" class="overlay hidden"><section id="modal" class="modal" role="dialog" aria-modal="true" tabindex="-1"></section></div>
+<script src="./app.js"></script>
+</body></html>

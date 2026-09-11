@@ -1,14 +1,12 @@
 {
-  "name": "ai-prompt-feishu-sync",
-  "version": "0.1.0",
+  "name": "ai-prompt-gallery",
+  "version": "1.5.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "wrangler dev",
-    "deploy": "wrangler deploy",
-    "db:init": "wrangler d1 execute ai-prompt-db --remote --file=./schema.sql"
+    "test": "node --test tests/*.test.mjs"
   },
   "devDependencies": {
-    "wrangler": "^4.33.1"
+    "wrangler": "^4.54.0"
   }
 }
