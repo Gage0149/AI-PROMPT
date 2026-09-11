@@ -1,7 +1,21 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "ai-prompt-gallery",
-  "main": "worker/index.js",
-  "compatibility_date": "2026-07-01",
-  "assets": { "directory": "./public", "binding": "ASSETS" }
+  "name": "ai-prompt-feishu-sync",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "ai-prompt-db",
+      "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+    }
+  ],
+  "vars": {
+    "FEISHU_DOCUMENT_ID": "REPLACE_WITH_YOUR_DOCUMENT_ID",
+    "SYNC_POLL_SECONDS": "8"
+  }
 }
