@@ -4,35 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="light">
-  <title>AI 绘画提示词库</title>
-  <link rel="stylesheet" href="./styles.css">
+  <meta name="theme-color" content="#111827">
+  <title>AI Prompt Gallery</title>
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<div class="shell">
-  <aside class="side">
-    <a class="brand" href="#" data-nav="library">
-      <span class="logo">AI</span>
-      <span><b>绘画提示词库</b><small>PROMPT GALLERY</small></span>
+<div class="app-shell">
+  <aside class="sidebar">
+    <a class="brand" href="/" data-link>
+      <span class="brand-mark">AI</span>
+      <span><b id="brandTitle">Prompt Gallery</b><small>FEISHU SYNC</small></span>
     </a>
-    <nav id="nav">
-      <span class="nav-label">提示词</span>
-      <button class="active" data-page="library"><span class="ico">▦</span><span>提示词库</span></button>
-      <button data-page="favorites"><span class="ico">★</span><span>我的收藏</span><b class="nav-count" id="favCount"></b></button>
-      <span class="nav-label">系统</span>
-      <button data-page="connect"><span class="ico">⚙</span><span>飞书连接</span></button>
-    </nav>
-    <div class="side-foot"><span class="dot"></span><span id="sideStatus">尚未连接</span></div>
+    <nav id="sideNav" class="side-nav"></nav>
+    <div class="side-foot"><span class="sync-dot"></span><span id="syncText">等待同步</span></div>
   </aside>
-  <main>
-    <header>
-      <div class="top-title" id="topTitle"><span>PROMPT GALLERY</span><strong>AI 绘画提示词库</strong></div>
-      <div class="header-actions"><span id="syncStatus"></span><button class="btn" id="refresh">↻ 同步</button><button class="btn primary" data-action="new">＋ 新增提示词</button></div>
+  <main class="main">
+    <header class="topbar">
+      <div class="topbar-title" id="topbarTitle">首页</div>
+      <div class="topbar-actions">
+        <span class="sync-time" id="lastSync"></span>
+        <button class="btn ghost" id="refreshBtn">↻ 同步</button>
+        <button class="btn primary hidden" id="newPromptBtn">＋ 新增提示词</button>
+      </div>
     </header>
-    <div id="notice" class="notice hidden"></div>
-    <section id="view"></section>
-    <footer>AI Prompt Gallery · 数据由飞书多维表格驱动</footer>
+    <div id="toast" class="toast hidden"></div>
+    <section id="view" class="view"></section>
   </main>
 </div>
-<div id="overlay" class="overlay hidden"><section id="modal" class="modal" role="dialog" aria-modal="true" tabindex="-1"></section></div>
-<script src="./app.js"></script>
-</body></html>
+<div id="overlay" class="overlay hidden"><section id="modal" class="modal" role="dialog" aria-modal="true"></section></div>
+<script src="/app.js"></script>
+</body>
+</html>
