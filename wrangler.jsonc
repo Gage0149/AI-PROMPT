@@ -11,7 +11,7 @@
     {
       "binding": "DB",
       "database_name": "ai-prompt-gallery-db",
-      "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID",
+      "database_id": "bdec58ba-1ef7-4457-9e21-54f0e25e52dc",
       "migrations_dir": "migrations"
     }
   ]
