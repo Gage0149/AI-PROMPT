@@ -1,10 +1,17 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
+
   "name": "ai-prompt",
   "main": "worker/index.js",
   "compatibility_date": "2026-09-01",
+
   "assets": {
     "directory": "./public",
     "binding": "ASSETS"
+  },
+
+  "vars": {
+    "FEISHU_APP_ID": "cli_a88b7c6c35fb100d",
+    "FEISHU_BASE_TOKEN": "HqbgbcYN3an1Qmssk9Vce0Rcn6g"
   }
 }
